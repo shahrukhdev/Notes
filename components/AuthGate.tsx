@@ -22,8 +22,8 @@ export default function AuthGate({
   const isProtected =
     pathname.startsWith("/dashboard") ||
     pathname.startsWith("/tags") ||
-    pathname.startsWith("/categories");
-    pathname.startsWith("/profile");
+    pathname.startsWith("/categories") ||
+    pathname.startsWith("/profile") ||
     pathname.startsWith("/notes");
 
   useEffect(() => {

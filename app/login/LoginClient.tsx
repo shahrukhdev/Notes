@@ -32,7 +32,7 @@ export default function LoginPage() {
       setLoading(true);
 
       const data = await loginUser({ email, password });
-      refreshUser();
+      await refreshUser();
 
       toast.success(data?.message);
       router.replace("/dashboard");
