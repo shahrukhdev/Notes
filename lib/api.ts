@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:8000/api/v1",
+    baseURL: "https://notes-api.alternatesites.com/api/v1",
     withCredentials: true
 });
 
@@ -15,6 +15,7 @@ api.interceptors.response.use(
       status === 401 &&
       !url?.includes("/auth/login") &&
       !url?.includes("/auth/register") &&
+      !url?.includes("/auth/forgot-password") &&
       !url?.includes("/user")
     ) {
       if (typeof window !== "undefined") {
