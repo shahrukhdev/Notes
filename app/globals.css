@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.25s ease-out;
+}
+
+/* TAGIFY INPUT BORDER FOCUS */
+.tagify {
+  --tag-bg: #10b981; /* emerald */
+  --tag-text-color: white;
+  --tag-hover: #059669;
+}
+
+/* INPUT FOCUS (remove blue outline) */
+.tagify__input:focus {
+  outline: none !important;
+}
+
+/* TAG BORDER */
+.tagify__tag {
+  border-radius: 8px;
+}
+
+/* REMOVE BLUE OUTLINE */
+.tagify--focus {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2) !important;
+}
